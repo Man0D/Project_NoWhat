@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoWhat?</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="shortcut icon" href="img/NoWhat_icon_white.ico">
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+  <nav>
+    <ul id="navbar">
+      <li><img src="img/NoWhat_logo_white.png" alt="logo" id="logo_site"/></li>
+      <li class="active"><a href="">Search</a></li>
+      <li><a href="">Create</a></li>
+      <li><a href="">Recommendations</a></li>
+    </ul>
+  </nav>
+  <div id="search">
+    <div id="basicForm">
+      <input id="search_bar" type="search" name="input" placeholder="Look for an event..." required onsearch="validateForm('https://api.hel.fi/linkedevents/v1/event/',1)" autofocus>
+      <input id="button_search" type="button" value="Search" onclick="validateForm('https://api.hel.fi/linkedevents/v1/event/',1)">
+    </div>
+    <div id="extendedFrom">
+      <table>
+        <tr>
+          <td>Beginning Date:</td><td><input type="date" id="StartDate"></td><td style="width: 100px; text-align: right;">End date: </td><td><input type="date" id="EndDate"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="search_result" >
+  </div>
+  <footer>
+    <p>NoWhat? is a project in collaboration with <a href="http://www.lut.fi/web/en">the University of Lappeenranta</a>
+      and <a href="https://dev.hel.fi/">the Helsinki Developers' Portal</a></p>
+  </footer>
+</body>
+</html>
