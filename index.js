@@ -27,8 +27,15 @@ function validateForm(url,pageNum) {
       y.innerHTML = "\n number of event found :"+ data.meta.count +"<br><br>";
       console.log(data);
       data.data.forEach(RenderingDataFromSearch);
-      pageNum+=1;
-      $('#search_result').append("<input id=\"button_search\" type=\"button\" value=\"next\" onclick=\"validateForm('https://api.hel.fi/linkedevents/v1/event/',"+pageNum+")\">");
+      var page = pageNum;
+      if(data.meta.previous != null){
+        page-=1;
+        $('#search_result').append("<input id=\"button_search\" type=\"button\" value=\"Previous\" onclick=\"validateForm('https://api.hel.fi/linkedevents/v1/event/',"+page+")\">");
+      }
+      if(data.meta.next != null){
+        pageNum+=1;
+        $('#search_result').append("<input id=\"button_search\" type=\"button\" value=\"next\" onclick=\"validateForm('https://api.hel.fi/linkedevents/v1/event/',"+pageNum+")\">");
+      }
     });
 }
 
