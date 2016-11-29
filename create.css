@@ -1,0 +1,72 @@
+body{
+  background-image: url(img/background.jpg);
+  background-color: black;
+  background-repeat:no-repeat;
+  background-position: top;
+  margin:0px
+}
+nav{
+  margin-bottom: 5%;
+  height: 50%;
+  width: inherit;
+  background-color: rgba(10, 10, 10, 0.8);
+  color: white;
+}
+#logo_site{
+  width: 60%;
+  height: 30%;
+}
+#navbar{
+  margin:0;
+  padding: 0;
+}
+#navbar li{
+  display:inline-block;
+  width: 20%;
+  font-size: 2em;
+  padding: 0.2em;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid grey;
+}
+#navbar li.active{
+  background-color: rgba(200, 200, 200, 0.4);
+}
+#create{
+  display: inline-block;
+  width:50%;
+  background: rgba(204, 204, 204, 0.5);
+  border-radius: 15px;
+  padding: 2em 2em 2em 2em;
+  position: relative;
+  left: 25%;
+}
+#extendedForm, #basicForm{
+  display: block;
+  margin: 1px;
+}
+footer{
+  background-color: black;
+  width:100%;
+  color: grey;
+  position: fixed;
+  bottom:0;
+  left:0;
+  text-align: center;
+}
+a, a:link, a:visited{
+  text-decoration: none;
+  color:grey;
+}
+a:hover{
+  color: #EDEDED;
+}
+
+@media only screen and (max-width: 768px) {
+
+   body { font-size: 0.5em; }
+   #search, #search_bar{
+     width:85%;
+     left: 5%;
+   }
+}
