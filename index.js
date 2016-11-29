@@ -6,6 +6,7 @@ document.onreadystatechange = function () {
 
 
 function validateForm(url,pageNum) {
+  $('html, body').animate({ scrollTop: 0 }, 'fast');
   var x = document.getElementById("search_bar");
   var dateStart = document.getElementById("StartDate");
   var dateEnd = document.getElementById("EndDate");
@@ -36,11 +37,12 @@ function validateForm(url,pageNum) {
         pageNum+=1;
         $('#search_result').append("<input id=\"button_search\" type=\"button\" value=\"next\" onclick=\"validateForm('https://api.hel.fi/linkedevents/v1/event/',"+pageNum+")\">");
       }
+
     });
 }
 
 function LookForEvent(url){
-  console.log("hEYYYYY");
+  console.log("NowWhat?");
   $.getJSON( url, {
     format: "json",
   })
@@ -54,8 +56,15 @@ function renderingDataSingleEvent(data){
   var y = document.getElementById("search_result");
   y.style.display = "inline-block";
 
-  var name = data.name.fi;
-  y.innerHTML = name;
+  var String_html = "<h4>"+data.name.fi+" - "+ data.date_published.split('T')[0] +"</h4>";
+
+  if(data.start_time != undefined) String_html = String_html.concat("</br>Start time : "+ data.start_time.split('T')[0] +" at "+ data.start_time.split('T')[1].replace('Z',''));
+  if(data.end_time != undefined) String_html = String_html.concat("</br>End time : "+ data.end_time.split('T')[0] +" at "+ data.end_time.split('T')[1]);
+  if(data.description != undefined) String_html = String_html.concat("</br></br><b>description :</b> "+ data.description.fi);
+  else String_html = String_html.concat("</br></br><b>description :</b> No description available");
+  if(data.info_url != undefined) String_html = String_html.concat("</br> Info url : <a href=\""+ data.info_url.fi +"\">"+ data.info_url.fi +"</a>");
+
+  y.innerHTML = String_html;
 }
 
 function RenderingDataFromSearch(element, index, array){
