@@ -32,7 +32,7 @@ nav{
 }
 #navbar li:hover{
   background-color: rgba( 150,150,150,0.5);
-  height: 120%;
+  padding-bottom: 1em;
 }
 #navbar li.active{
   background-color: rgba(200, 200, 200, 0.4);
@@ -64,7 +64,6 @@ a, a:link, a:visited{
 }
 a:hover{
   color: #EDEDED;
-  font-size: 150%;
 }
 
 @media only screen and (max-width: 768px) {
