@@ -55,9 +55,11 @@ footer{
 a, a:link, a:visited{
   text-decoration: none;
   color:grey;
+  transition: all 0.3s ease 0s;
 }
 a:hover{
   color: #EDEDED;
+  
 }
 
 @media only screen and (max-width: 768px) {
