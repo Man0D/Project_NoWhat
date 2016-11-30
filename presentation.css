@@ -34,6 +34,7 @@ nav{
 #navbar li:hover{
   background-color: rgba( 150,150,150,0.5);
   padding-bottom: 1em;
+  color: #EDEDED;
 }
 #navbar li.active{
   background-color: rgba(200, 200, 200, 0.4);
@@ -61,11 +62,8 @@ footer{
 a, a:link, a:visited{
   text-decoration: none;
   color:grey;
-  transition: all 0.3s ease 0s;
 }
-a:hover{
-  color: #EDEDED;
-}
+
 
 @media only screen and (max-width: 768px) {
 
