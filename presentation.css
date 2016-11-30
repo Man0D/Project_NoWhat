@@ -14,7 +14,7 @@ nav{
 }
 #logo_site{
   width: 60%;
-  height: 30%;
+  vertical-align: middle;
 }
 #navbar{
   margin:0;
@@ -33,6 +33,7 @@ nav{
 }
 #navbar li:hover{
   background-color: rgba( 150,150,150,0.5);
+  height: 120%;
 }
 #navbar li.active{
   background-color: rgba(200, 200, 200, 0.4);
