@@ -32,7 +32,16 @@ nav{
 #navbar li.active{
   background-color: rgba(200, 200, 200, 0.4);
 }
-
+#title_center {
+    color: white;
+    text-align: center;
+    background-color: rgba(25,25,25,0.7);
+    border-radius: 2em;
+    width: 60%;
+    padding: 1em;
+    position: relative;
+    left: 20%;
+}
 footer{
   background-color: black;
   width:100%;
