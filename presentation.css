@@ -18,6 +18,8 @@ nav{
 #navbar{
   margin:0;
   padding: 0;
+  position: relative;
+  left: 1.3em;
 }
 #navbar li{
   background-color: rgba(10, 10, 10, 0.8);
@@ -27,7 +29,6 @@ nav{
   padding: 0.2em;
   text-align: center;
   vertical-align: middle;
-  border-right: 1px solid grey;
   transition: all 0.3s ease 0s;
 }
 #navbar li:hover{
