@@ -41,6 +41,7 @@ nav{
     padding: 1em;
     position: relative;
     left: 20%;
+    image-rendering: auto;
 }
 footer{
   background-color: black;
