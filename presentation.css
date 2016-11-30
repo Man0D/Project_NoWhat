@@ -30,6 +30,7 @@ nav{
   text-align: center;
   vertical-align: middle;
   transition: all 0.3s ease 0s;
+  color: grey;
 }
 #navbar li:hover{
   background-color: rgba( 150,150,150,0.5);
@@ -61,7 +62,6 @@ footer{
 }
 a, a:link, a:visited{
   text-decoration: none;
-  color:grey;
 }
 
 
