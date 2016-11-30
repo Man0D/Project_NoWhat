@@ -9,7 +9,6 @@ nav{
   margin-bottom: 5%;
   height: 50%;
   width: inherit;
-  background-color: rgba(10, 10, 10, 0.8);
   color: white;
 }
 #logo_site{
@@ -21,7 +20,7 @@ nav{
   padding: 0;
 }
 #navbar li{
-  background-color: inherit;
+  background-color: rgba(10, 10, 10, 0.8);
   display:inline-block;
   width: 20%;
   font-size: 2em;
